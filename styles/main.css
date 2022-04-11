@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root {
+    font-size: 16px;
+    --background-color: #034D63;
+    --mid-color: #034053;
+    --border-color: #11232C;
+    --text-color: #d8c4a6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#nav-bar {
+    height: 100vh;
+    position: fixed;
+    border-right: solid 2px var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#nav-title {
+    font-size: 1.75rem;
+    font-weight: normal;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 0;
+}
+
+#nav-text, #nav-info ul {
+    margin: 0;
+    padding: 0;
+}
+
+#nav-text a {
+    text-decoration: none;
+}
+
+#nav-text li {
+    border-bottom: solid 2px var(--border-color);
+    font-size: 1.5rem;
+}
+
+#nav-info li {
+    border-top: solid 2px var(--border-color);
+}
+
+#nav-text li, #nav-info li {
+    background-color: var(--mid-color);
+    font-family: "Roboto Slab";
+    color: var(--text-color);
+    padding: 1rem;
+    transition: background-color 500ms;
+    list-style: none;
+}
+
+#nav-text a li:hover {
+    background-color: var(--border-color);
+}
+
+#content-container {
+    margin-left: 319.133px;
+}
+
+#content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#personal-information {
+    margin-top: 40px;
+}
+
+.content-text-container {
+    width: 80%;
+    margin-bottom: 40px;
+}
+
+.content-text-title {
+    color: var(--text-color);
+    font-family: "Roboto Slab";
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 0;
+}
+
+.content-text {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-family: "Roboto Slab";
+    padding: 20px;
+    border: 2px solid var(--border-color);
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: var(--mid-color);
+}
+
+#ideal-job-image-container {
+    width: 618px;
+    height: 618px;
+    border: 2px solid var(--border-color); 
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#ideal-job-image {
+    display: block;
+    opacity: 0.3;
+    transition: opacity 500ms;
+}
+
+#ideal-job-link:hover #ideal-job-image-container #ideal-job-image {
+    opacity: 1.0;
+}
+
+#job-img-description {
+    display: flex;
+    flex-direction: row;
+}
+
+#job-description {
+    margin-left: 20px;
+}
+
+#test-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.personality-img-container {
+    height: 450px;
+    width: 450px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid var(--border-color); 
+}
+
+#personality-img-container1 {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#personality-img-container2 {
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.personality-image {
+    opacity: 0.3;
+    transition: opacity 500ms;
+}
+
+#personality-image1 {
+    display: block;
+    width: 450px;
+}
+
+#personality-image2 {
+    display: block;
+    height: 450px;
+}
+
+a:hover .personality-image {
+    opacity: 1.0;
+}
+
+#personality-image3 {
+    display: block;
+    height: 450px;
+    width: 450px;
+}
+
+@media (max-width: 1807px) {
+    #test-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .personality-img-container {
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1667px) {
+    #job-img-description {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1208px) {
+    #test-container {
+        width: 498px;
+    }
+
+    .content-text-container {
+        width: 700px;
+    }
+
+    .content-text {
+        width: 610px;
+    }
+}
+
+@media (max-width: 987px) {
+    #nav-bar {
+        background-color: var(--mid-color);
+        height: 220px;
+        width: 100%;
+        border: none;
+        overflow-y: scroll;
+        border-top: solid 2px var(--border-color);
+        border-bottom: solid 2px var(--border-color);
+        z-index: 1;
+        text-align: center;
+    }
+
+    #content-container {
+        margin-top: 400px;
+        margin: 0;
+    }
+
+    #personal-information {
+        margin-top: 250px;
+    }
+
+    #nav-info li {
+        border-top: none;
+        border-bottom: solid 2px var(--border-color);
+    }
+
+    #student-email {
+        border-bottom: none !important;
+    }
+}
+
+@media (max-width: 673px) {
+    .content-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 85%;
+    }
+    
+    .content-text {
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #ideal-job-image-container {
+        width: 90%;
+    }
+
+    #ideal-job-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #ideal-job-image {
+        width: 100%;
+    }
+
+    #test-container {
+        width: 100%;
+    }
+
+    #personality-tests {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .personality-img-container {
+        height: 300px;
+        width: 300px;
+    }
+
+    #personality-image1 {
+        display: block;
+        width: 300px;
+    }
+    
+    #personality-image2 {
+        display: block;
+        height: 300px;
+    }
+
+    #personality-image3 {
+        display: block;
+        height: 300px;
+        width: 300px;
+    }
+}
